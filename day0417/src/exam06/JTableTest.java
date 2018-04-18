@@ -20,9 +20,7 @@ import javax.swing.table.DefaultTableModel;
 public class JTableTest extends JFrame {
 
 	Vector<String> listNames;
-	Vector<String> listData1;
-	Vector<String> listData2;
-	Vector<String> listData3;
+	
 	Vector<String> listData;
 	Vector<Vector> list;
 	DefaultTableModel dt;
@@ -31,9 +29,9 @@ public class JTableTest extends JFrame {
 	
 	public JTableTest() {
 		listNames = new Vector<String>();
-		listData1 = new Vector<String>();
-		listData2 = new Vector<String>();
-		listData3 = new Vector<String>();
+		Vector<String> listData1 = new Vector<String>();
+		Vector<String> listData2 = new Vector<String>();
+		Vector<String> listData3 = new Vector<String>();
 
 		list = new Vector<Vector>();
 
@@ -151,7 +149,7 @@ public class JTableTest extends JFrame {
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		new JTableTest();
