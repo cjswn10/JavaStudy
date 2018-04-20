@@ -2,10 +2,16 @@ package hw;
 
 import java.io.*;
 import java.net.*;
-
+//요청한 클라이언트와 1:1
 public class MultiServerThread implements Runnable {
+	//데이터를 주고 받기 위한 데이터 socket을 멤버변수로 가짐
 	private Socket socket;
+	//이 클래스는 MultiServer에 의해서 생성되고
+	//그 때 매개변수로 MultiServer를 전달받는다
+	//그것을 닫기 위한 변수
 	private MultiServer ms;
+	
+	
 	private ObjectInputStream ois;
 	private ObjectOutputStream oos;
 	
