@@ -1,0 +1,14 @@
+/bin/
+
+*.com
+*.class
+
+*.log
+
+.metadata
+*.tmp
+*.bak
+*.swp
+.recommenders
+.project
+.classpath
