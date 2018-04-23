@@ -9,6 +9,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Set;
 import java.util.Vector;
 
@@ -20,6 +21,9 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+
+import hw.ClientDAO;
+import hw.ClientVO;
 
 public class EmpDB extends JFrame {
 
@@ -38,6 +42,7 @@ public class EmpDB extends JFrame {
 	Vector<Vector<String>> rowData;
 	JTable table;
 
+	EmpDAO dao;
 	public EmpDB() {
 
 		f = this;
@@ -75,6 +80,23 @@ public class EmpDB extends JFrame {
 		table = new JTable(rowData, colNames);
 		JScrollPane jsp = new JScrollPane(table);
 
+		ArrayList<EmpVO> arr = new ArrayList<EmpVO>(); 
+		arr = dao.selectAll();
+		
+		for(EmpVO cv : arr) {
+			Vector<String> v = new Vector<String>();
+			v.add(cv.getEno() + "");
+			v.add(cv.getEname());
+			v.add(cv.getDno() + "");
+			v.add(cv.getEsal() + "");
+			v.add(cv.getElevel());
+			v.add(cv.getEjumin());
+			v.add(cv.getEaddr());
+			v.add(cv.getEhiredate());
+			
+			rowData.add(v);
+		}
+		
 		JPanel jPanel_top = new JPanel();
 
 		jPanel_top.setLayout(new GridLayout(8, 2));
