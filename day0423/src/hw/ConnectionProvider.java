@@ -31,7 +31,7 @@ public class ConnectionProvider {
       try {
          Class.forName("oracle.jdbc.driver.OracleDriver");
 
-         conn = DriverManager.getConnection("jdbc:oracle:thin:@203.236.209.105:1521:XE", "madang", "madang");
+         conn = DriverManager.getConnection("jdbc:oracle:thin:@203.236.209.115:1521:XE", "scott", "tiger");
          Statement stmt = conn.createStatement();
 
       } catch (Exception e) {
