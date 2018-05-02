@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * 부서명을 선택하면 해당 부서에 근무하는 모든 직원의 정보를 출력하는 GUI 프로그램을 작성하시오
  */
 public class EmpDAO {
-	public ArrayList<EmpVO> getDeptList(String dname) {
+	public ArrayList<EmpVO> selectAll(String dname) {
 		ArrayList<EmpVO> list = new ArrayList<EmpVO>();
 		String sql = "SELECT * FROM emp e, dept d WHERE dname=? AND d.dno=e.dno";
 
@@ -24,7 +24,7 @@ public class EmpDAO {
 				e.setEname(rs.getString(2));
 				e.setSal(rs.getInt(3));
 				e.setComm(rs.getInt(4));
-				e.setHiredate(rs.getString(5));
+				e.setHiredate(rs.getDate(5));
 				e.setJumin(rs.getString(6));
 				e.setDno(rs.getInt(7));
 				e.setPosition(rs.getString(8));

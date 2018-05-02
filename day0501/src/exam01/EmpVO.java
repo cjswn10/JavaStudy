@@ -1,4 +1,4 @@
-package hw;
+package exam01;
 
 import java.util.Date;
 
@@ -7,7 +7,7 @@ public class EmpVO {
 	private String ename;
 	private int sal;
 	private int comm;
-	private Date hiredate;
+	private String hiredate;
 	private String jumin;
 	private int dno;
 	private String position;
@@ -20,7 +20,7 @@ public class EmpVO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public EmpVO(int eno, String ename, int sal, int comm, Date hiredate, String jumin, int dno, String position,
+	public EmpVO(int eno, String ename, int sal, int comm, String hiredate, String jumin, int dno, String position,
 			String addr, int mgr, String email) {
 		super();
 		this.eno = eno;
@@ -68,11 +68,11 @@ public class EmpVO {
 		this.comm = comm;
 	}
 
-	public Date getHiredate() {
+	public String getHiredate() {
 		return hiredate;
 	}
 
-	public void setHiredate(Date hiredate) {
+	public void setHiredate(String hiredate) {
 		this.hiredate = hiredate;
 	}
 

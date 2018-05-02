@@ -44,7 +44,6 @@ public class EmpDB extends JFrame {
 		JScrollPane jsp = new JScrollPane(table);
 
 		JPanel p1 = new JPanel();
-		// JPanel p2 = new JPanel();
 
 		JRadioButton btn1 = new JRadioButton("¿µ¾÷ÆÀ");
 		JRadioButton btn2 = new JRadioButton("°³¹ß1ÆÀ");
@@ -70,7 +69,7 @@ public class EmpDB extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				select(btn1.getText());
+				getList(btn1.getText());
 			}
 		});
 
@@ -79,7 +78,7 @@ public class EmpDB extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				select(btn2.getText());
+				getList(btn2.getText());
 			}
 		});
 		btn3.addActionListener(new ActionListener() {
@@ -87,7 +86,7 @@ public class EmpDB extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				select(btn3.getText());
+				getList(btn3.getText());
 			}
 		});
 		btn4.addActionListener(new ActionListener() {
@@ -95,7 +94,7 @@ public class EmpDB extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				select(btn4.getText());
+				getList(btn4.getText());
 			}
 		});
 		btn5.addActionListener(new ActionListener() {
@@ -103,7 +102,7 @@ public class EmpDB extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				select(btn5.getText());
+				getList(btn5.getText());
 			}
 		});
 
@@ -115,10 +114,10 @@ public class EmpDB extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
-	private void select(String dname) {
+	private void getList(String dname) {
 		rowData.clear();
 		ArrayList<EmpVO> arr = new ArrayList<EmpVO>();
-		arr = dao.getDeptList(dname);
+		arr = dao.selectAll(dname);
 
 		for (EmpVO e : arr) {
 			Vector<String> v = new Vector<String>();
@@ -127,7 +126,7 @@ public class EmpDB extends JFrame {
 			v.add(e.getEname());
 			v.add(e.getSal() + "");
 			v.add(e.getComm() + "");
-			v.add(e.getHiredate());
+			v.add(e.getHiredate() + "");
 			v.add(e.getJumin());
 			v.add(e.getDno() + "");
 			v.add(e.getPosition());

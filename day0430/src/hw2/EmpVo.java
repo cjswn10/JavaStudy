@@ -1,8 +1,8 @@
-package hw;
+package hw2;
 
-import java.util.Date;
+import java.sql.Date;
 
-public class EmpVO {
+public class EmpVo {
 	private int eno;
 	private String ename;
 	private int sal;
@@ -14,13 +14,11 @@ public class EmpVO {
 	private String addr;
 	private int mgr;
 	private String email;
-
-	public EmpVO() {
+	public EmpVo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-	public EmpVO(int eno, String ename, int sal, int comm, Date hiredate, String jumin, int dno, String position,
+	public EmpVo(int eno, String ename, int sal, int comm, Date hiredate, String jumin, int dno, String position,
 			String addr, int mgr, String email) {
 		super();
 		this.eno = eno;
@@ -35,93 +33,71 @@ public class EmpVO {
 		this.mgr = mgr;
 		this.email = email;
 	}
-
 	public int getEno() {
 		return eno;
 	}
-
 	public void setEno(int eno) {
 		this.eno = eno;
 	}
-
 	public String getEname() {
 		return ename;
 	}
-
 	public void setEname(String ename) {
 		this.ename = ename;
 	}
-
 	public int getSal() {
 		return sal;
 	}
-
 	public void setSal(int sal) {
 		this.sal = sal;
 	}
-
 	public int getComm() {
 		return comm;
 	}
-
 	public void setComm(int comm) {
 		this.comm = comm;
 	}
-
-	public Date getHiredate() {
-		return hiredate;
+	public String getHiredate() {
+		return hiredate+"";
 	}
-
 	public void setHiredate(Date hiredate) {
 		this.hiredate = hiredate;
 	}
-
 	public String getJumin() {
 		return jumin;
 	}
-
 	public void setJumin(String jumin) {
 		this.jumin = jumin;
 	}
-
 	public int getDno() {
 		return dno;
 	}
-
 	public void setDno(int dno) {
 		this.dno = dno;
 	}
-
 	public String getPosition() {
 		return position;
 	}
-
 	public void setPosition(String position) {
 		this.position = position;
 	}
-
 	public String getAddr() {
 		return addr;
 	}
-
 	public void setAddr(String addr) {
 		this.addr = addr;
 	}
-
 	public int getMgr() {
 		return mgr;
 	}
-
 	public void setMgr(int mgr) {
 		this.mgr = mgr;
 	}
-
 	public String getEmail() {
 		return email;
 	}
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
+	
 }
